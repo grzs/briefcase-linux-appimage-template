@@ -25,7 +25,7 @@ RUN apt-add-repository ppa:deadsnakes/ppa
 
 # Install git, Python, and any packages required
 RUN apt-get update -y && \
-    apt-get install -y \
+    apt-get install -y --allow-downgrades \
         git \
         python${PY_VERSION}-dev \
         python${PY_VERSION}-venv \
